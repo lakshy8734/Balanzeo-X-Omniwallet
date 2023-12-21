@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "RubikDoodleShadow";
+  src: url("../public/fonts/RubikDoodleShadow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.balance-text {
+  position: relative;
+  color: #777;
+  left: 10px;
+  /* height: 100px; */
+  font-size: 24px;
+  font-family: "RubikDoodleShadow", sans-serif; /* Apply the font family */
+  font-weight: bold;
+}
+
+body {
+  /* display: flex; */
+  background: url("./images/main-bg.webp") no-repeat;
+  overflow: hidden;
+
+  /* min-height: 100vh; */
+  /* margin: 0; */
+  /* background-color: #818181;
+  */
+  /* color: white; */
+}
+
+.background-image {
+  display: flex;
+}
+
+.horse-cliff {
+  /* display: flex; */
+}
+
+.horse {
+  height: 350px;
+  width: 350px;
+  position: relative;
+  left: 600px;
+  top: -410px;
+}
+.cliff {
+  height: 900px;
+  width: 500px;
+  position: relative;
+  left: 270px;
+  top: 10px;
+  /* bottom: 0px; */
+}
+
+.trees {
+  position: relative;
+  top: 550px;
+  height: 360px;
+  width: 200px;
+  right: 1650px;
+}
+
+.stars {
+}
+.container {
+  max-width: 960px;
+}
+
+.navbar {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  height: 130px;
+  padding: 200px;
+  margin: 10px;
+
+  /* height: 400px; */
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(
+    5.7px
+  ); /* Adjust padding for spacing inside the navbar */
+}
+
+.navbar-brand {
+  position: relative;
+  top: -150px;
+  left: 30px;
+  width: 300px;
+  font-size: larger;
+}
+
+.navbar .navbar-item {
+  position: relative;
+  /* top: 1px; */
+  /* left: 1px; */
+  text-transform: uppercase;
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+  color: #eee;
+  animation: rotate 2s ease-in-out alternate infinite;
+}
+
+#navbarMenu {
+  position: relative;
+  top: -130px;
+}
+
+.navbar-item:before {
+  content: attr(data-shadow);
+  color: transparent;
+  text-shadow: 0 0 15px #111;
+  /* position: absolute; */
+  z-index: -1;
+  /* margin: -0.1em 0 0 0; */
+  animation: skew 2s ease-in-out alternate infinite;
+  transform-origin: bottom;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(-10deg);
+    text-shadow: 1px -1px #ccc, 2px -1px #bbb, 3px -2px #aaa, 4px -2px #999,
+      5px -3px #888, 6px -3px #777;
+  }
+  to {
+    transform: rotateY(10deg);
+    text-shadow: -1px -1px #ccc, -2px -1px #bbb, -3px -2px #aaa, -4px -2px #999,
+      -5px -3px #888, -6px -3px #777;
+  }
+}
+@keyframes skew {
+  from {
+    transform: scaleY(0.3) skewX(-15deg);
+  }
+  to {
+    transform: scaleY(0.3) skewX(-20deg);
+  }
+}
+
+.navbar .button {
+  color: aquamarine;
+  /* border: 2px solid rgba(20, 171, 241, 0); */
+}
+
+.drop {
+  display: grid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.select-chain {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  &:hover {
+    size: auto; /* This will expand the select box on hover */
+  }
+
+  /* Hide the dropdown arrow on hover */
+  &:hover::-ms-expand {
+    display: none;
+  }
+}
+
+.input-field::placeholder {
+  color: black;
+  text-align: center;
+  line-height: 1.5;
+}
+.dropdown,
+.input-field,
+.balance-button {
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  background-color: #817881;
+  font-size: large;
+  font-family: cursive;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.connect-wallet {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #e10859;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.connect-wallet:hover {
+  background-color: #ff00bf60;
+}
+
+.connect-wallet span {
+  font-weight: bold;
+}
+
+.box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.panel {
+  margin-top: 2em;
+}
+
+.panel-heading {
+  background-color: black;
+  color: white;
+}
+
+.address-box {
+  padding: 3em;
+}
+
+.withdraw-error {
+  color: red;
+}
+
+.withdraw-success {
+  color: green;
+}
