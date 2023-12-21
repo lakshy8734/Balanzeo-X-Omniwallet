@@ -97,7 +97,7 @@ function App() {
 
               if (selectedCurrency === "USDD") {
                 contractAddress = "TPYmHEhy5n8TCEfYGqW2rPxsghSfzghPDn";
-                decimalPlaces = 11; // Adjust this based on the token's actual configuration
+                decimalPlaces = 18; // Adjust this based on the token's actual configuration
               } else if (selectedCurrency === "USDT") {
                 contractAddress = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
                 decimalPlaces = 6; // Adjust this based on the token's actual configuration
